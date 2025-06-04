@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <div class="sidebar">
+      <h2>📚 My BookShelf</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Members</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Borrow / Return</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-content">
+      <header>
+        <h1>The Library</h1>
+      </header>
+
+      <div class="panel">
+        <h2>Members</h2>
+        <form id="member-form" class="form-inline">
+          <input type="text" id="member-name" placeholder="Member Name" required />
+          <button type="submit">Add Member</button>
+        </form>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="member-list"></tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Books</h2>
+        <form id="book-form" class="form-inline">
+          <input type="text" id="book-title" placeholder="Book Title" required />
+          <input type="text" id="book-author" placeholder="Author" required />
+          <button type="submit">Add Book</button>
+        </form>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Status</th>
+              <th>Borrowed By</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Borrow / Return</h2>
+
+        <form id="borrow-form" class="form-inline">
+          <select id="borrow-member" required></select>
+          <select id="borrow-book" required></select>
+          <button type="submit">Borrow Book</button>
+        </form>
+
+        <form id="return-form" class="form-inline">
+          <select id="return-book" required></select>
+          <button type="submit">Return Book</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="../dist/index.js"></script>
+</body>
+</html>

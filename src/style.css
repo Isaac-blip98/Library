@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1e293b;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 1em;
+}
+
+.sidebar a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #334155;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #f9fafb;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.panel {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.panel h2 {
+  margin-bottom: 15px;
+}
+
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-inline input,
+.form-inline select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.form-inline button {
+  background-color: #0ea5e9;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-inline button:hover {
+  background-color: #0284c7;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f1f5f9;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.data-table button {
+  padding: 5px 10px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.data-table .edit {
+  background-color: #10b981;
+  color: white;
+}
+
+.data-table .delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
